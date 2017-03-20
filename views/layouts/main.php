@@ -50,7 +50,7 @@ PublicAsset::register($this);
                     <ul class="nav navbar-nav text-uppercase">
                         <?php if(Yii::$app->user->isGuest):?>
                             <li><a href="<?= Url::toRoute(['auth/login'])?>">Login</a></li>
-                           <li><a href="<?= Url::toRoute(['auth/signup'])?>">Register</a></li>
+
                         <?php else: ?>
                             <?= Html::beginForm(['/auth/logout'], 'post')
                             . Html::submitButton(

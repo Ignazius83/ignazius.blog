@@ -85,7 +85,7 @@ class SiteController extends Controller
         $categories = Category::getAll();
         $comments = $article->getArticleComments();
         $commentForm = new CommentForm();
-        $article->viewedCounter();
+       // $article->viewedCounter();
         
         return $this->render('single',[
             'article'=>$article,

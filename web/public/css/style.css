@@ -1644,6 +1644,8 @@ p.go-back-home a:hover {
     
     color: #00BFF3;
     background: rgb(250,250,250);
+    font-size: 12pt;
+    font-weight: lighter;
     //display: -ms-flexbox;
     
 }
