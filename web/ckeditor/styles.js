@@ -66,7 +66,7 @@ CKEDITOR.stylesSet.add( 'default', [
 	{ name: 'Small',			element: 'small' },
 	{ name: 'Typewriter',		element: 'tt' },
 
-	{ name: 'Computer Code',	element: 'div',  attributes: { 'class': 'code_block' }
+	{ name: 'Computer Code',	element: 'pre',  attributes: { 'class': "brush: as3" }
 
 	},
 	{ name: 'Keyboard Phrase',	element: 'kbd'

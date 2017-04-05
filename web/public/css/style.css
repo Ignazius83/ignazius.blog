@@ -679,7 +679,7 @@ feature post
     left: 0;
     bottom: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.5);
+   // background: rgba(0, 0, 0, 0.5);
     opacity: 1;
     display: -webkit-box;
     display: -webkit-flex;
@@ -699,7 +699,29 @@ feature post
     color: #fff;
 
 }
+.category{
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-left: 5px;
+    padding-top: 5px;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
 
+    background: #00BFF3;
+    width: 150px;
+    height: 40px;
+    color: #fff;
+
+}
+.category:hover{
+    color: #000;
+    background: #fff;
+    text-decoration: none;
+    border: 1px solid #575757;
+}
 .feature-content:hover .overlay-text {
 
     color: #fff;

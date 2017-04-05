@@ -5,6 +5,7 @@ namespace app\controllers;
 use Yii;
 use app\models\Article;
 use app\models\Category;
+use app\models\Tag;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
@@ -84,6 +85,7 @@ class SiteController extends Controller
         $recent = Article::getRecent();
         $categories = Category::getAll();
         $comments = $article->getArticleComments();
+        $tags = $article->getArticleTags();
         $commentForm = new CommentForm();
        // $article->viewedCounter();
         
@@ -93,7 +95,25 @@ class SiteController extends Controller
             'recent'=>$recent,
             'categories'=>$categories,
            'comments'=>$comments,
+            'tags' =>$tags,
             'commentForm'=>$commentForm
+        ]);
+    }
+
+    public function actionTag($name)
+    {
+       // var_dump($name);
+        $data = Tag::getArticlesByTag($name);
+        $popular = Article::getPopular();
+        $recent = Article::getRecent();
+        $categories = Category::getAll();
+
+         return $this->render('category',[
+            'articles'=>$data['articles'],
+            'pagination'=>$data['pagination'],
+            'popular'=>$popular,
+            'recent'=>$recent,
+            'categories'=>$categories
         ]);
     }
     

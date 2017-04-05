@@ -92,6 +92,16 @@ PublicAsset::register($this);
 </footer>
 
 <?php $this->endBody() ?>
+<?php $this->registerCssFile('/syntaxhighlighter/styles/shCore.css');?>
+<?php $this->registerCssFile('/syntaxhighlighter/styles/shThemeDefault.css');?>
+<?php $this->registerJsFile('/syntaxhighlighter/scripts/shCore.js');?>
+<?php $this->registerJsFile('/syntaxhighlighter/scripts/shBrushCpp.js');?>
+
+<?php $this->registerJsFile('/syntaxhighlighter/scripts/shBrushAS3.js');?>
+<script>
+    SyntaxHighlighter.all();
+
+</script>
 </body>
 </html>
 <?php $this->endPage() ?>    
